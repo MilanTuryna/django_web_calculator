@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Výpočet obsahu a obvodu trojúhelníku</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Vypočítat</button>
+</form>
+{% if perimeter and area %}
+<p>Obvod: {{ perimeter }}</p>
+<p>Obsah: {{ area }}</p>
+{% endif %}
+{% endblock %}

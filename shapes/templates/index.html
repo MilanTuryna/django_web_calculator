@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>
+    Vítejte na stránce s kalkulačkou pro základní geometrické útvary (trojúhelník, čtverec, kružnice).
+    <ul>
+        <li><a href="{% url 'circle' %}">Výpočet kružnice</a></li>
+        <li><a href="{% url 'triangle' %}">Výpočet trojúhelníku</a></li>
+        <li><a href="{% url 'square' %}">Výpočet čtverce</a></li>
+    </ul>
+</p>
+{% endblock %}
